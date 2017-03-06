@@ -1,0 +1,9 @@
+After reading the assignment and reviewing error handling basics I began to think about the structure of this week's program. I am envisioning an iPlayer class implemented by Human Player and Computer Player classes. When/If we add a GUI (reading ahead that's week 9) it should be easy to change the Human Player class to GUI. The Human Player class will have the logic to read and parse the user input from Scanner.in.
+Also required will be a Board class that holds the board and includes methods to query wins, column heights, print the board to the console and accept plays.
+
+I discovered as I was reviewing the assignment before getting ready to commit, that there was a sample tic-tac-toe program. Didn't look at that. 
+
+
+Road blocks: My goal of a simple robot player hit snags because I decided to delegate move validation to the player classes, so I'm going to have to make a robot at least smart enough to not choose columns that are already filled.
+
+Overcoming: I added some logic to both the Board class and Robot class to only pick available columns.
