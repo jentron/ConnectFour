@@ -48,13 +48,19 @@ public class Board {
 				if(inputCells[i][j] > 0) this.columnHeight[j]++;
 			}
 		}
-		
-		for(int i = 0; i < WIDTH; i++) { this.columnHeight[i] = 0; }		
 	}
 	
 	public int[][] getBoard()
 	{
-		return cells.clone();
+		int [][] outputCells = new int[HEIGHT][WIDTH];
+		for(int i = 0; i < HEIGHT; i++)
+		{
+			for(int j = 0; j < WIDTH; j++) { 
+				outputCells[i][j] = cells[i][j];
+			}
+		}
+		
+		return outputCells;
 	}
 
 	/* Returns true of there is still space in a column

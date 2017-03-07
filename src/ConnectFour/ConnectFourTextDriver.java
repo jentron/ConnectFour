@@ -21,19 +21,19 @@ public class ConnectFourTextDriver {
 		iPlayer playerTwo;
 		
 		String p = (String)JOptionPane.showInputDialog(null, "How Many Robots?", "Robots?",
-				  JOptionPane.QUESTION_MESSAGE, null, robots,robots[1]);
+				  JOptionPane.QUESTION_MESSAGE, null, robots,robots[2]);
 		
 		if(p.equals("None"))
 		{
 			playerOne = new HumanTextPlayer(JOptionPane.showInputDialog(null, "What is player one's name?", null));
 			playerTwo = new HumanTextPlayer(JOptionPane.showInputDialog(null, "What is player two's name?", null));			
 		} else if (p.equals("Two"))	{
-			playerOne = new RandomRobotPlayer();
+			playerOne = new BetterRobotPlayer();
 			playerTwo = new RandomRobotPlayer();
 			playerTwo.setName("Another Random Robot");
 		} else {
 			playerOne = new HumanTextPlayer(JOptionPane.showInputDialog(null, "What is player one's name?", null));
-			playerTwo = new RandomRobotPlayer();			
+			playerTwo = new BetterRobotPlayer();			
 		}
 		
 		game = new Game(playerOne, playerTwo);
