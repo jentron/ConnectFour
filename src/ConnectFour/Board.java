@@ -21,7 +21,7 @@ public class Board {
 	Board()
 	{
 		this.clearBoard();
-	}
+	} // constructor
 	
 /* 
  * Clears the board in preparation for a game.	
@@ -48,8 +48,8 @@ public class Board {
 				if(inputCells[i][j] > 0) this.columnHeight[j]++;
 			}
 		}
-	}
-	
+	} // setBoard
+	 
 	public int[][] getBoard()
 	{
 		int [][] outputCells = new int[HEIGHT][WIDTH];
@@ -61,7 +61,7 @@ public class Board {
 		}
 		
 		return outputCells;
-	}
+	} // getBoard
 
 	/* Returns true of there is still space in a column
 	 * 
@@ -75,7 +75,7 @@ public class Board {
 	public int[] getColumnHeights()
 	{
 		return columnHeight;
-	}
+	} // getColumnHeights
 	
 	/*
 	 * Prints a visual representation of the board to System.out
